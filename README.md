@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏇 SamiAbi v1.3
+### Advanced Tactical Horse Racing Intelligence Platform
 
-## Getting Started
+SamiAbi is a high-performance, AI-powered racing analysis platform designed for advanced tactical modeling and race shape prediction. It synchronizes multiple data streams to project tactical maps, runner matrices, and win probabilities with military-grade precision.
 
-First, run the development server:
+---
+
+## ⚡ Core Intelligence Features
+
+- **🎯 Tactical Pace Mapping**: Real-time visualization of field positioning (Leaders, Pressers, Stalkers, Closers).
+- **🤖 AI-Driven Analysis**: Leverage state-of-the-art LLMs (OpenAI/Gemini) to process complex racing structures.
+- **📊 Scenario Probabilities**: Calculate and weight multiple race outcomes based on tactical variables.
+- **🧬 Runner Matrix**: Deep-dive analytics for every horse, including win percentages and scenario-fit modeling.
+- **📡 Real-Time Data Sync**: Modular ingestion units for Race Program, Performance History, and Tactical Split data.
+- **🌑 Dark Terminal UI**: Premium, futuristic interface designed for high-focus tactical sessions.
+
+## 🛠 Technical Architecture
+
+- **Framework**: [Next.js 16 (Turbopack)](https://nextjs.org/)
+- **Core Engine**: React 19 (Server & Client Components)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Backend API**: Edge-compatible Route Handlers
+- **AI Integration**: OpenAI SDK (GPT-4o) / Google Generative AI (Gemini Flash)
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Ensure you have **Node.js 20+** and **npm** installed on your system.
+
+### 2. Environment Configuration
+Create a `.env` file in the root directory and add your API credentials:
+
+```bash
+# Required for AI Core
+OPENAI_API_KEY=your_openai_key_here
+GEMINI_API_KEY=your_gemini_key_here
+
+# Application Configuration
+APP_URL=http://localhost:3000
+```
+
+### 3. Installation
+```bash
+npm install
+```
+
+### 4. Development Server
+Start the development server with Turbopack for the fastest experience:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to access the tactical terminal.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project is optimized for deployment on the [Vercel Platform](https://vercel.com/new).
 
-## Learn More
+For remote access during development, it is configured to run behind a **Cloudflare Tunnel**, providing secure HTTPS access to local HMR and dev resources.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Classification: Restricted Access Intelligence Software*  
+*© SamiAbi AI Systems 2026*

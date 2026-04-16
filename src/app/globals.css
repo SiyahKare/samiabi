@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background-base: #020617;
+  --color-foreground-base: #f8fafc;
+  --color-cyan-glow: #22d3ee;
+  --color-violet-glow: #8b5cf6;
+  --color-navy-surface: #0f172a;
+  --color-navy-border: #1e293b;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #020617;
+  --foreground: #f8fafc;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #020617;
+  color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 50% -20%, #1e293b, transparent),
+    linear-gradient(rgba(30, 41, 59, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 41, 59, 0.1) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+@layer utilities {
+  .futuristic-glow {
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+  }
+  
+  .cyan-terminal-text {
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+  }
+  
+  .glass-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.05);
+  }
+  
+  .shimmer-animation {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(34, 211, 238, 0.05) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-effect 3s infinite linear;
+  }
+}
+
+@keyframes shimmer-effect {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.ready-pulse {
+  animation: pulse-cyan 2s infinite;
 }
